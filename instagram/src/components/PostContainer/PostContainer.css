@@ -35,5 +35,6 @@
 
 .post-image{
   width: 100%;
+  max-width: 500px;
   min-width: 300px;
 }
