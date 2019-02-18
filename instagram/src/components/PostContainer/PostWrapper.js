@@ -1,8 +1,17 @@
 import React from 'react';
+import PostContainer from './PostContainer';
 
 const PostWrapper = props => {
   return (
-    <div></div>
+    <div>
+      {props.dummyData.map( postObject => 
+        <PostContainer 
+          key={postObject.username}
+          dummyData={postObject}
+        />
+      )}
+
+    </div>
   )
 }
 
