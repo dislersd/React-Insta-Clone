@@ -3,14 +3,13 @@ import PostContainer from './PostContainer';
 
 const PostWrapper = props => {
   return (
-    <div>
+    <div className='posts-wrapper'>
       {props.dummyData.map( postObject => 
         <PostContainer 
           key={postObject.username}
           dummyData={postObject}
         />
       )}
-
     </div>
   )
 }

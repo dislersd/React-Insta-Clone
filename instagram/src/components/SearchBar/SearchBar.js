@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css'
 
 
 const SearchBar = () => {
@@ -10,9 +11,9 @@ const SearchBar = () => {
       </div>
       <input className="nav-searchbar" type="text"/>
       <div className="nav-icons">
-        <a href="">A</a>
-        <a href="">B</a>
-        <a href="">C</a>
+        <a href="1">A</a>
+        <a href="1">B</a>
+        <a href="1">C</a>
       </div>
     </nav>
   );

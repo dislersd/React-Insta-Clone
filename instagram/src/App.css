@@ -62,8 +62,8 @@ h1 {
 
 nav {
   display: flex;
-  background-color: #fae;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  border-bottom: 1px solid #000;
 }

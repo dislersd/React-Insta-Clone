@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostWrapper from "./components/PostContainer/PostWrapper";
-import logo from "./logo.svg";
 import dummyData from "./dummy-data";
 import "./App.css";
-import "./components/SearchBar/SearchBar.css"
+
 
 class App extends Component {
   constructor() {

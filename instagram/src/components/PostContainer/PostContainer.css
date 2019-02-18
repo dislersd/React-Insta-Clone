@@ -1,0 +1,39 @@
+.posts-wrapper {
+  margin: 100px auto;
+  width: 60%;
+  min-width: 300px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 50px auto;
+}
+
+.post-container header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-container header img {
+  border-radius: 50%;
+  max-width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+}
+
+.post-container header p {
+  font-size: 1.4rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.post-image{
+  width: 100%;
+  min-width: 300px;
+}
