@@ -10,6 +10,7 @@ class CommentSection extends React.Component {
       dummyData: this.props.dummyData,
       comments: this.props.dummyData.comments,
       username: this.props.dummyData.username,
+      likes: this.props.dummyData.likes,
       inputValue: ''
     };
   }
@@ -25,22 +26,30 @@ class CommentSection extends React.Component {
     })
   }
 
+  like = () => {
+    this.setState({
+      likes: this.state.likes + 1
+    })
+  }
+  
   handleChanges = e => {
     console.log(this.state.inputValue)
     this.setState({
       inputValue: e.target.value
     })
   }
-
+  
   render() {
     return (
       <div className="comment-section-wrapper">
         <div className="like-and-comment-icons">
-        <button><i className="far fa-heart"></i></button>
-        <button><i className="far fa-comment"></i></button>
+          <button
+          onClick={this.like}
+          ><i className="far fa-heart"></i></button>
+          <button><i className="far fa-comment"></i></button>
         </div>
         <div className="likes-counter">
-          {this.state.dummyData.likes} likes
+          {this.state.likes} likes
         </div> 
         <div className="comments">
           <Comment data={this.state.comments} />
