@@ -13,12 +13,20 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-section-wrapper">
-        <div className="like-and-comment" />
-        <div className="likes-counter" />
+        <div className="like-and-comment-icons">
+        <button>Like</button>
+        <button>Comment</button>
+        </div>
+        <div className="likes-counter">
+          {this.state.dummyData.likes} likes
+        </div> 
         <div className="comments">
           <Comment data={this.state.dummyData.comments} />
         </div>
-        <input className="add-comment" />
+        <input 
+        className="add-comment"
+        placeholder="Add a comment..."  
+        />
       </div>
     );
   }

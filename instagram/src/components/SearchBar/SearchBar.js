@@ -9,7 +9,11 @@ const SearchBar = () => {
         <a href="#home">#</a>
         <h1>Instagram</h1>
       </div>
-      <input className="nav-searchbar" type="text"/>
+      <input
+      className="nav-searchbar"
+      type="text"
+      placeholder="Search..."
+      />
       <div className="nav-icons">
         <a href="1">A</a>
         <a href="1">B</a>

@@ -1,5 +1,7 @@
 nav input {
-  width: 20rem;
+  width: 30rem;
+  font-size: 2rem;
+  padding: 0.5rem;
 }
 
 .logo-and-h1 {
