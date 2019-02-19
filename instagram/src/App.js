@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostWrapper from "./components/PostContainer/PostWrapper";
-import dummyData from "./dummy-data";
+import data from "./dummy-data";
 import "./App.css";
 
 
@@ -10,8 +10,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData
+      dummyData: data
     };
+  }
+
+  componentDidMount() {
+    this.setState({ dummyData: data})
   }
 
   render() {

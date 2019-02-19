@@ -17,9 +17,9 @@ const SearchBar = () => {
       placeholder="Search..."
       />
       <div className="nav-icons">
-        <a href="1"><i class="far fa-compass"></i></a>
-        <a href="1"><i class="far fa-heart"></i></a>
-        <a href="1"><i class="far fa-user"></i></a>
+        <a href="1"><i className="far fa-compass"></i></a>
+        <a href="1"><i className="far fa-heart"></i></a>
+        <a href="1"><i className="far fa-user"></i></a>
       </div>
     </nav>
   );
