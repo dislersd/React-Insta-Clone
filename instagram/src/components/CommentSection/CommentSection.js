@@ -8,12 +8,21 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       dummyData: this.props.dummyData,
+      comments: this.props.dummyData.comments,
+      username: this.props.dummyData.username,
       inputValue: ''
     };
   }
 
-  addNewComment = (e, index) => {
+  addNewComment = (e) => {
     e.preventDefault();
+    const newComment = {
+      username: this.state.username,
+      text: this.state.inputValue
+    }
+    this.setState ({
+      comments: [...this.state.comments, newComment ]
+    })
   }
 
   handleChanges = e => {
@@ -34,7 +43,7 @@ class CommentSection extends React.Component {
           {this.state.dummyData.likes} likes
         </div> 
         <div className="comments">
-          <Comment data={this.state.dummyData.comments} />
+          <Comment data={this.state.comments} />
         </div>
         <form 
         className="add-comment-form"

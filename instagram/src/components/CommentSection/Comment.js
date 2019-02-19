@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 const Comment = props => (
   <div className="comment-container">
     {props.data.map((comment, index) => (
-      <div className="comment" key={index}>
+      <div
+      className="comment"
+      key={index}
+      >
         <span>{comment.username}</span>
         {comment.text}
       </div>

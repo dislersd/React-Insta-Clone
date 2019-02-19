@@ -5,8 +5,11 @@ import PropTypes from "prop-types";
 const PostWrapper = props => {
   return (
     <div className="posts-wrapper">
-      {props.dummyData.map(postObject => (
-        <PostContainer key={postObject.username} dummyData={postObject} />
+      {props.dummyData.map((postObject, index) => (
+        <PostContainer 
+        key={index}
+        index={index} 
+        dummyData={postObject} />
       ))}
     </div>
   );
