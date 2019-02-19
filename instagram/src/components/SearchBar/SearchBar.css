@@ -12,8 +12,10 @@ nav input {
 
 .logo-and-h1 a {
   border-right: 1px solid black;
-  padding: 10px;
+  padding-right: 15px;
   margin-right: 10px;
+  color: #000;
+  font-size: 3rem;
 }
 
 .nav-searchbar {
@@ -21,6 +23,8 @@ nav input {
 }
 
 .nav-icons a {
-  margin: 0 10px;
+  margin: 0 2rem;
+  font-size: 2.5rem;
+  color: #000;
 }
 

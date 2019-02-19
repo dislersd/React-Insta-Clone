@@ -14,8 +14,8 @@ class CommentSection extends React.Component {
     return (
       <div className="comment-section-wrapper">
         <div className="like-and-comment-icons">
-        <button>Like</button>
-        <button>Comment</button>
+        <button><i class="far fa-heart"></i></button>
+        <button><i class="far fa-comment"></i></button>
         </div>
         <div className="likes-counter">
           {this.state.dummyData.likes} likes

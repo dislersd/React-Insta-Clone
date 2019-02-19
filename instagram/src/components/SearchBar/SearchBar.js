@@ -6,7 +6,9 @@ const SearchBar = () => {
   return(
     <nav>
       <div className="logo-and-h1">
-        <a href="#home">#</a>
+        <a href="#home">
+        <i className="fab fa-instagram"></i>
+        </a>
         <h1>Instagram</h1>
       </div>
       <input
@@ -15,9 +17,9 @@ const SearchBar = () => {
       placeholder="Search..."
       />
       <div className="nav-icons">
-        <a href="1">A</a>
-        <a href="1">B</a>
-        <a href="1">C</a>
+        <a href="1"><i class="far fa-compass"></i></a>
+        <a href="1"><i class="far fa-heart"></i></a>
+        <a href="1"><i class="far fa-user"></i></a>
       </div>
     </nav>
   );
