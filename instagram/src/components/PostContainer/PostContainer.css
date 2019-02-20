@@ -1,8 +1,12 @@
+
+
 .posts-wrapper {
-  margin: 100px auto;
-  width: 60%;
+  margin: 0 auto;
+  width: 100%;
   min-width: 30rem;
-  max-width: 60rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .post-container {
@@ -10,7 +14,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  margin: 50px auto;
+  margin: 1rem 1rem;
   border: 1px solid #000;
   overflow: hidden;
 }
@@ -36,5 +40,6 @@
 
 .post-image{
   width: 100%;
-  min-width: 300px;
+  min-width: 30rem;
+  max-width: 40rem;
 }

@@ -17,7 +17,7 @@ const SearchBar = props => {
         name='inputValue'
         type="text"
         placeholder="Search..."
-        onChange={props.searchChanges}
+        onKeyDown={props.searchPosts}
         />
 
       <div className="nav-icons">

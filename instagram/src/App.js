@@ -10,24 +10,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      instagramPosts: data,
-      inputValue: ''
+      instagramPosts: [],
+      inputValue: '',
+      filteredPosts: []
     };
   }
 
   componentDidMount() {
-    this.setState({ dummyData: data})
+    this.setState({ instagramPosts: data})
   }
-
-  // searchPosts = () => {
-  //   this.setState({
-  //     dummyData: this.state.dummyData.filter( post => 
-  //       post.username.includes(this.state.inputValue) 
-  //       )
-  //   })
-  // }
-
-  // this.state.dummyData.username.includes(this.state.inputValue)
+  
+  // Kevins Code Solutions
 
   // {this.props.data.map((item, index) => {
   //   if (item.username.includes(this.props.searchTerm)) {
@@ -35,28 +28,41 @@ class App extends Component {
   //   } return null;
   //   })}
 
-  // searchPostsHandler = e => {
-  //   const posts = this.state.posts.filter(p => {
-  //     if (p.username.includes(e.target.value)) {
-  //       return p;
-  //     }
-  //   });
-  //   this.setState({ filteredPosts: posts });
-  // };
+  // Lambda Solution
 
-  searchChanges = e => {
-    console.log(this.state.inputValue);
-    this.setState({
-      [e.target.name]: e.target.value,
-  })
-}
+  searchPostsHandler = e => {
+    const posts = this.state.instagramPosts.filter( post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+  };
+
+
+
+
+//   searchChanges = e => {
+//     console.log(this.state.inputValue);
+//     this.setState({
+//       [e.target.name]: e.target.value,
+//   })
+// }
 
   render() {
     return (
       <div className="app-container">
           <SearchBar 
-          searchChanges={this.searchChanges}/>
-          <PostWrapper dummyData={this.state.dummyData}/>
+          searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
+          />
+          <div class="post-parent">
+            <PostWrapper
+            dummyData={
+              this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.instagramPosts
+              }
+              />
+          </div>
       </div>
     );
   }
