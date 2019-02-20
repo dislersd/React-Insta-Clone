@@ -7,8 +7,7 @@ const PostWrapper = props => {
     <div className="posts-wrapper">
       {props.dummyData.map((postObject, index) => (
         <PostContainer 
-        key={index}
-        index={index} 
+        key={index} 
         dummyData={postObject} />
       ))}
     </div>
