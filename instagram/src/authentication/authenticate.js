@@ -6,28 +6,51 @@ const authenticate = App => LoginPage =>
       super();
       this.state = {
         loggedIn: false,
-        inputValue: ""
+        username: "",
+        password: ""
       };
     }
 
-    componentDidMount() {}
 
-    signIn = e => {
+    signUp = e => {
       e.preventDefault();
-      localStorage.setItem("user", this.state.inputValue);
+      localStorage.setItem("user", this.state.username);
+      localStorage.setItem("password", this.state.password);
       window.location.reload();
     };
 
-    changeHandler = e => {
+    login = () => {
+      if (
+        localStorage.getItem("user") === this.state.username &&
+        localStorage.getItem("password") === this.state.password
+      ) {
+        this.setState({ loggedIn: true });
+      }
+    } 
+
+    userHandler = e => {
       console.log(e.target.value);
-      this.setState({ inputValue: e.target.value })
-    }
+      this.setState({ username: e.target.value });
+    };
+
+    passwordHandler = e => {
+      console.log(e.target.value);
+      this.setState({ password: e.target.value });
+    };
 
     render() {
-      if (localStorage.getItem("user") === this.state.inputValue) {
+      if (this.state.loggedIn) {
         return <App />;
       }
-      return <LoginPage {...this.state} changeHandler={this.changeHandler} signIn={this.signIn} />;
+      return (
+        <LoginPage
+          {...this.state}
+          userHandler={this.userHandler}
+          passwordHandler={this.passwordHandler}
+          signUp={this.signUp}
+          login={this.login}
+        />
+      );
     }
   };
 

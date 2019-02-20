@@ -8,13 +8,19 @@ const Login = props => {
       <input 
         type="text" 
         placeholder="username..."
-        onChange={props.changeHandler}
+        onChange={props.userHandler}
       />
 
-      <input type="text" placeholder="password..." />
+      <input type="text" placeholder="password..."
+      onChange={props.passwordHandler}
+       />
 
-      <button onClick={props.signIn} >
-      Login
+      <button onClick={props.signUp} >
+      register
+      </button>
+
+      <button onClick={props.login} >
+      login
       </button>
     </div>
   );
