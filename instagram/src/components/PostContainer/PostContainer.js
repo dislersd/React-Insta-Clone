@@ -16,6 +16,7 @@ const PostContainer = props => {
   );
 };
 
+// Type Checking
 PostContainer.propTypes = {
   dummyData: PropTypes.shape({
     username: PropTypes.string.isRequired,

@@ -65,3 +65,7 @@
 .add-comment-form button:hover {
   color: coral;
 }
+
+.liked {
+  color: red;
+}

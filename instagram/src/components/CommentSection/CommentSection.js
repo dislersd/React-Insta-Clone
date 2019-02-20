@@ -11,8 +11,13 @@ class CommentSection extends React.Component {
       comments: this.props.dummyData.comments,
       username: this.props.dummyData.username,
       likes: this.props.dummyData.likes,
+      likedTrueFalse: false,
       inputValue: ''
     };
+  }
+
+  componentDidMount() {
+    this.setState({ dummyData: this.props.dummyData})
   }
 
   addNewComment = (e) => {
@@ -26,10 +31,21 @@ class CommentSection extends React.Component {
     })
   }
 
-  like = () => {
+  like = e => {
+
+    if (this.state.likedTrueFalse === false) {
     this.setState({
-      likes: this.state.likes + 1
+      likes: this.state.likes + 1,
+      likedTrueFalse: true
     })
+    e.target.classList.toggle('liked')
+  } else {
+    this.setState({
+      likes: this.state.likes - 1,
+      likedTrueFalse: false
+    })
+    e.target.classList.toggle('liked')
+  }
   }
   
   handleChanges = e => {
@@ -45,15 +61,26 @@ class CommentSection extends React.Component {
         <div className="like-and-comment-icons">
           <button
           onClick={this.like}
-          ><i className="far fa-heart"></i></button>
-          <button><i className="far fa-comment"></i></button>
+          className='heart-button'
+          >
+          {/* font awesome */}
+          <i className="far fa-heart"></i>
+          </button>
+
+          <button>
+          {/* font awesome */}
+          <i className="far fa-comment"></i>
+          </button>
         </div>
+
         <div className="likes-counter">
           {this.state.likes} likes
         </div> 
+
         <div className="comments">
           <Comment data={this.state.comments} />
         </div>
+
         <form 
         className="add-comment-form"
         onSubmit={this.addNewComment}
@@ -64,10 +91,7 @@ class CommentSection extends React.Component {
           value={this.state.inputValue}
           onChange={this.handleChanges}  
           />
-          <button
-          type="submit"
-          
-          > ... </button>
+          <button type="submit"> ... </button>
         </form>
       </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css'
 
 
-const SearchBar = () => {
+const SearchBar = props => {
   return(
     <nav>
       <div className="logo-and-h1">
@@ -11,11 +11,15 @@ const SearchBar = () => {
         </a>
         <h1>Instagram</h1>
       </div>
-      <input
-      className="nav-searchbar"
-      type="text"
-      placeholder="Search..."
-      />
+      
+        <input
+        className="nav-searchbar"
+        name='inputValue'
+        type="text"
+        placeholder="Search..."
+        onChange={props.searchChanges}
+        />
+
       <div className="nav-icons">
         <a href="1"><i className="far fa-compass"></i></a>
         <a href="1"><i className="far fa-heart"></i></a>
