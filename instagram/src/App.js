@@ -15,15 +15,6 @@ class App extends Component {
     };
   }
 
-//   searchChanges = e => {
-//     console.log(this.state.inputValue);
-//     this.setState({
-//       [e.target.name]: e.target.value,
-//   })
-// }
-
-
-
   render() {
     return (
       <div className="app-container">

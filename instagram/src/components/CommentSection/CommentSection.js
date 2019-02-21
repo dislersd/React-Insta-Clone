@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
     this.state = {
       dummyData: this.props.dummyData,
       comments: this.props.dummyData.comments,
-      username: this.props.dummyData.username,
+      username: localStorage.getItem('user'),
       likes: this.props.dummyData.likes,
       likedTrueFalse: false,
       inputValue: ""

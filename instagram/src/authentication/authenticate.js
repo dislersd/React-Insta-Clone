@@ -10,8 +10,7 @@ const authenticate = App => LoginPage =>
         password: ""
       };
     }
-
-
+    
     signUp = e => {
       e.preventDefault();
       localStorage.setItem("user", this.state.username);

@@ -1,10 +1,11 @@
 import React from "react";
+import "./Login.css"
 
 
 
 const Login = props => {
   return (
-    <div>
+    <div className="login-container">
       <input 
         type="text" 
         placeholder="username..."
@@ -15,7 +16,7 @@ const Login = props => {
       onChange={props.passwordHandler}
        />
 
-      <button onClick={props.signUp} >
+      <button className='register-button' onClick={props.signUp} >
       register
       </button>
 
