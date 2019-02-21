@@ -21,7 +21,7 @@ const InstaLogo = styled.a`
   font-size: 3rem;
 `;
 
-const NavIcons = styled.a`
+const NavIcon = styled.a`
   margin: 0 2rem;
   font-size: 2.5rem;
   color: #000;
@@ -45,15 +45,15 @@ const SearchBar = props => {
       />
 
       <div className="nav-icons">
-        <NavIcons href="1">
+        <NavIcon href="1">
           <i className="far fa-compass" />
-        </NavIcons>
-        <NavIcons href="1">
+        </NavIcon>
+        <NavIcon href="1">
           <i className="far fa-heart" />
-        </NavIcons>
-        <NavIcons href="1">
+        </NavIcon>
+        <NavIcon href="1">
           <i className="far fa-user" />
-        </NavIcons>
+        </NavIcon>
       </div>
     </nav>
   );

@@ -1,16 +1,26 @@
 import React from "react";
 import PostContainer from "./PostContainer";
 import PropTypes from "prop-types";
+import styled from 'styled-components';
+
+const PostsWrapper = styled.div `
+  margin: 0 auto;
+  width: 100%;
+  min-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`;
 
 const PostWrapper = props => {
   return (
-    <div className="posts-wrapper">
+    <PostsWrapper>
       {props.dummyData.map((postObject, index) => (
         <PostContainer 
         key={index} 
         dummyData={postObject} />
       ))}
-    </div>
+    </PostsWrapper>
   );
 };
 

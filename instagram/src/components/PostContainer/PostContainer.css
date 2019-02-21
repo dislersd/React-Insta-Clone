@@ -1,13 +1,13 @@
 
 
-.posts-wrapper {
+/* .posts-wrapper {
   margin: 0 auto;
   width: 100%;
   min-width: 30rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
+} */
 
 .post-container {
   display: flex;
