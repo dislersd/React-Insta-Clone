@@ -1,32 +1,62 @@
-import React from 'react';
-import './SearchBar.css'
+import React from "react";
+import styled from "styled-components";
+import "./SearchBar.css";
 
+const SearchBarInput = styled.input`
+  width: 30rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+`;
+const LogoAndH1 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const InstaLogo = styled.a`
+  border-right: 1px solid black;
+  padding-right: 15px;
+  margin-right: 10px;
+  color: #000;
+  font-size: 3rem;
+`;
+
+const NavIcons = styled.a`
+  margin: 0 2rem;
+  font-size: 2.5rem;
+  color: #000;
+`;
 
 const SearchBar = props => {
-  return(
+  return (
     <nav>
-      <div className="logo-and-h1">
-        <a href="#home">
-        <i className="fab fa-instagram"></i>
-        </a>
+      <LogoAndH1>
+        <InstaLogo href="#home">
+          <i className="fab fa-instagram" />
+        </InstaLogo>
         <h1>Instagram</h1>
-      </div>
-      
-        <input
-        className="nav-searchbar"
-        name='inputValue'
+      </LogoAndH1>
+
+      <SearchBarInput
+        name="inputValue"
         type="text"
         placeholder="Search..."
         onKeyDown={props.searchPosts}
-        />
+      />
 
       <div className="nav-icons">
-        <a href="1"><i className="far fa-compass"></i></a>
-        <a href="1"><i className="far fa-heart"></i></a>
-        <a href="1"><i className="far fa-user"></i></a>
+        <NavIcons href="1">
+          <i className="far fa-compass" />
+        </NavIcons>
+        <NavIcons href="1">
+          <i className="far fa-heart" />
+        </NavIcons>
+        <NavIcons href="1">
+          <i className="far fa-user" />
+        </NavIcons>
       </div>
     </nav>
   );
-}
+};
 
 export default SearchBar;
