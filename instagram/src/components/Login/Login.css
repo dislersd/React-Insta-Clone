@@ -1,0 +1,23 @@
+.login-container {
+  background-color: #525668;
+  width: 20rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-container input {
+  margin: 1rem auto;
+  height: 3rem;
+}
+
+.login-container button {
+  width: 6rem;
+  margin: 1rem auto;
+  background-color: rgb(35, 241, 162);
+  border: none;
+  font-size: 1.4rem;
+}
